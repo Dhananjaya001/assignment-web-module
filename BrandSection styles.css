@@ -1,0 +1,127 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the outer div section */
+.brands-section {
+    background-color: #fff; /* Optional: Add a background color to the section */
+    padding: 20px;
+    margin: 20px auto; /* Center the section with some margin */
+    max-width: 1400px; /* Slightly wider than the inner content for padding */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.popular-brands {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content inside the section */
+    padding: 20px;
+}
+
+.popular-brands h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.brand-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-btn {
+    padding: 15px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.brand-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.watch-image {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: -110px; /* Position above the brand name */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Show the image when hovering over the brand container */
+.brand-container:hover .watch-image {
+    display: block;
+}
+
+.divider {
+    width: 50px;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px auto;
+}
+
+.display-all-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.display-all-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .brands-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+    }
+
+    .watch-image {
+        top: -90px; /* Adjust position for smaller screens */
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
+    }
+
+    .watch-image {
+        top: -70px; /* Adjust position for very small screens */
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -1,0 +1,66 @@
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.stat-card {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+/* Stats Section */
+.stats {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.stats h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.stat-card .icon {
+    font-size: 40px;
+    color: #f5a623; /* Orange color to match the image */
+    margin-bottom: 10px;
+}
+
+.stat-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-size: 14px;
+    color: #666;
+}
